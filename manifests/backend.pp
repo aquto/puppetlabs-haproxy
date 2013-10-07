@@ -11,10 +11,6 @@
 #
 # === Parameters
 #
-# [*name*]
-#   The title of the resource is arbitrary and only utilized in the concat
-#    fragment name.
-#
 # [*ports*]
 #     An array or commas-separated list of ports for which the backend server
 #     will accept connections from the load balancer. If you use an array
@@ -55,7 +51,6 @@
 #
 define haproxy::backend (
   $ports,
-  $name           = $title,
   $server_names   = $::hostname,
   $ipaddresses    = '',
   $options        = '',

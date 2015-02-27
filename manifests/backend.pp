@@ -29,6 +29,10 @@
 #      Can be an array. If this option is omitted, $server_names will 
 #      be used
 #
+# [*mode*]
+#    The mode of operation for the listening service. Valid values are undef,
+#    'tcp', 'http', and 'health'.
+#
 # [*options*]
 #      An array of options to be specified inside the backend
 #       configuration block.
@@ -51,6 +55,7 @@
 #
 define haproxy::backend (
   $ports,
+  $mode           = undef,
   $server_names   = $::hostname,
   $ipaddresses    = '',
   $options        = '',

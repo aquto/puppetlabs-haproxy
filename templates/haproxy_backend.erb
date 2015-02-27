@@ -1,5 +1,8 @@
 
 backend <%= @name %>
+<% if @mode -%>
+  mode  <%= @mode %>
+<% end -%>
 <% Array(@options).each do |option| -%>
   <%= option %>
 <% end -%>
